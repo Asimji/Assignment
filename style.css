@@ -1,0 +1,169 @@
+body{
+    background-color: gray;
+}
+.top{
+    margin-bottom: 2rem;
+}
+.new{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    width: 100%;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding-left: 25%;
+    font-size: 1.2rem;
+    font-weight: none;
+    font-family: sans-serif;
+}
+
+.img1{
+    position: relative;
+    height: 105vh;
+    overflow: hidden;
+    
+}
+.img2 {
+    position: absolute;
+    height: 13rem;
+    width: 32rem;
+    top: 10rem;
+    left: 5rem;
+    padding: 2rem;
+    background:linear-gradient(to right, #ef5350, #ef5350, #ef5350, #ef5350, #ef5350, #ef5350,#ef5350, #ef5350, #ef5350 );
+    opacity: 0.5; /* Set the opacity for the .img2 div only */
+}
+
+ .img2 div{
+    font-size: 1.2rem;
+    color: white;
+    opacity: 1;
+ }
+
+/* width: 98.9%;
+    height: 8rem; */
+.only{
+    height: 8rem;
+    background: linear-gradient(to right, #ef5350, #f48fb1, #f48fb1, #f48fb1, #e99fb7, #e9a5bb, #e6ad52, #e7ad4e,#dde95e);
+}
+
+
+
+.bottom{
+    background: linear-gradient(to right, #ef5350, #f48fb1, #f48fb1, #f48fb1, #e99fb7, #e9a5bb, #e6ad52, #e7ad4e,#dde95e);
+    height: 100vh;
+}
+
+
+#box{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:3rem;
+    padding:2rem 2rem 2rem 8rem;
+
+}
+.single {
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 0 15% 0 17%;
+    overflow: hidden;
+    display: inline-block;
+    padding: 1vh;
+    background: white;
+    width: 70%;
+    padding: 3vh 0 0 3vh;
+}
+.diff{
+    
+    width: 92%;
+    height: 30vh ;
+    border-radius: 0 20% 0 20%;
+}
+.diff img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 0 20% 0 20%;
+}
+
+.single h3,
+.single p {
+    text-align: center;
+    font-family: serif;
+}
+.single h3{
+    font-weight: bold;
+}
+button{
+    padding: 1rem;
+    width: 8rem;
+    border: 2px solid gray;
+    background-color: rgb(209, 170, 177);
+    border-radius: 40px 40px 40px 40px;
+}
+.bottom h1{    
+    text-align: center;
+    color:white;
+    font-size: 2rem;
+    padding-top: 5vh;
+    
+}
+@media screen and (min-width:750px) and (max-width:1110px){
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.img1{
+    display: block;
+}
+.img2{
+    display: none;
+}
+#box{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap:5rem;
+    padding:2rem
+}
+
+.bottom{
+    background-color: pink;
+    height: 300vh;
+   
+}
+
+   
+}
+@media screen and (max-width:750px){
+.nav{
+    display: none;
+}
+#box{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap:5rem;
+    padding:2rem
+}
+
+
+.img1{
+    display: block;
+}
+.img2{
+    display: none;
+}
+.bottom{
+    background-color: pink;
+    height: 300vh;
+   
+}
+
+
+}
