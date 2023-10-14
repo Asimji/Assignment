@@ -1,25 +1,54 @@
 body{
     background-color: gray;
 }
+/* Top Section */
+
+/* Top Section */
 .top{
     margin-bottom: 2rem;
 }
-.new{
+.new {
     display: flex;
     justify-content: space-between;
     background-color: white;
     width: 100%;
-}
-.nav{
-    display: flex;
-    align-items: center;
-    gap: 4rem;
-    padding-left: 25%;
-    font-size: 1.2rem;
-    font-weight: none;
-    font-family: sans-serif;
+    
 }
 
+/* Navbar Section */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+    letter-spacing: 0.2vw;
+
+}
+
+.nav-links {
+    display: flex;
+    gap: 5rem;
+    padding-left: 15%;  
+}
+
+.menu-button {
+    margin-left: 25%;
+    font-size: 1rem;
+    cursor: pointer;
+    display: none;
+}
+
+.icons {
+    width: 20vh;
+    text-align: right;
+    display: flex;
+    align-items: center;
+}
+
+/* Image Sections */
 .img1{
     position: relative;
     height: 105vh;
@@ -34,7 +63,7 @@ body{
     left: 5rem;
     padding: 2rem;
     background:linear-gradient(to right, #ef5350, #ef5350, #ef5350, #ef5350, #ef5350, #ef5350,#ef5350, #ef5350, #ef5350 );
-    opacity: 0.5; /* Set the opacity for the .img2 div only */
+    opacity: 0.5; 
 }
 
  .img2 div{
@@ -43,27 +72,27 @@ body{
     opacity: 1;
  }
 
-/* width: 98.9%;
-    height: 8rem; */
+/* Gradient Background Box Section */
 .only{
     height: 8rem;
     background: linear-gradient(to right, #ef5350, #f48fb1, #f48fb1, #f48fb1, #e99fb7, #e9a5bb, #e6ad52, #e7ad4e,#dde95e);
 }
 
 
-
+/* Bottom Section  */
 .bottom{
     background: linear-gradient(to right, #ef5350, #f48fb1, #f48fb1, #f48fb1, #e99fb7, #e9a5bb, #e6ad52, #e7ad4e,#dde95e);
     height: 100vh;
+  
 }
 
-
+/*Food Item  Section */
 #box{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap:3rem;
     padding:2rem 2rem 2rem 8rem;
-
+   
 }
 .single {
     position: relative;
@@ -97,12 +126,15 @@ body{
 .single h3{
     font-weight: bold;
 }
-button{
+
+/* Order Button Part */
+.order-button button{
     padding: 1rem;
     width: 8rem;
     border: 2px solid gray;
     background-color: rgb(209, 170, 177);
     border-radius: 40px 40px 40px 40px;
+ 
 }
 .bottom h1{    
     text-align: center;
@@ -111,59 +143,111 @@ button{
     padding-top: 5vh;
     
 }
-@media screen and (min-width:750px) and (max-width:1110px){
-.nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 1.5rem;
-    font-weight: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.img1{
-    display: block;
-}
-.img2{
-    display: none;
-}
-#box{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    gap:5rem;
-    padding:2rem
-}
 
-.bottom{
-    background-color: pink;
-    height: 300vh;
-   
-}
+/* Media Query For Tablet and Mobile View */
+@media screen and (max-width:1050px){
 
-   
-}
-@media screen and (max-width:750px){
-.nav{
-    display: none;
-}
-#box{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    gap:5rem;
-    padding:2rem
-}
+    .menu-button{
+        display: block;
+    }
+    .nav-links{
+        display: none;
+    }
+
+    .nav-links.show {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .menu-button.show {
+        display: block;
+    }
 
 
-.img1{
-    display: block;
-}
-.img2{
-    display: none;
+    .img1{
+        display: relative;
+        height: 40%;
+        overflow: hidden;   
+    }
+
+    #box{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:2rem;
+        padding:1rem 1rem 1rem 3rem;
+       
+    }
+
+.order-button{
+    float: left;
+    margin-left: 12vh;
 }
 .bottom{
-    background-color: pink;
-    height: 300vh;
-   
+    background: linear-gradient(to right, #ef5350, #f48fb1, #f48fb1, #f48fb1, #e99fb7, #e9a5bb, #e6ad52, #e7ad4e,#dde95e);
+    height: 140vh;
+  
+}
 }
 
 
+@media screen and (max-width: 820px) {
+    
+    .img2 {
+        position: absolute;
+        height: 13rem;
+        width: 50%;
+        top: 20px;
+        left: 20px;
+        padding: 2rem;
+        background:linear-gradient(to right, #ef5350, #ef5350, #ef5350, #ef5350, #ef5350, #ef5350,#ef5350, #ef5350, #ef5350 );
+        opacity: 0.5; /* Set the opacity for the .img2 div only */
+    }
+    .img2 div{
+        font-size: 1rem;
+        color: white;
+        opacity: 1;
+     }
+
+
 }
+
+@media screen and (max-width:550px) {
+    #box{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap:2rem;
+        padding:1rem 1rem 1rem 3rem;
+       
+    }
+    .order-button{
+        float: left;
+        margin-left: 30%;
+    }
+    .bottom{
+        background: linear-gradient(to right, #ef5350, #f48fb1, #f48fb1, #f48fb1, #e99fb7, #e9a5bb, #e6ad52, #e7ad4e,#dde95e);
+        height: 200vh;
+      
+    }
+
+}
+@media screen and (max-width:500px) {
+    .img2 {
+        position: absolute;
+        height: 50%;
+        width: 40%;
+        top: 20px;
+        left: 20px;
+        padding: 2rem;
+        background:linear-gradient(to right, #ef5350, #ef5350, #ef5350, #ef5350, #ef5350, #ef5350,#ef5350, #ef5350, #ef5350 );
+        opacity: 0.5; /* Set the opacity for the .img2 div only */
+    }
+    .img2 div{
+        font-size: 0.6rem;
+        color: white;
+        opacity: 1;
+     }
+}
+
