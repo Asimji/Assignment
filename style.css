@@ -175,6 +175,7 @@ body{
         padding: 0;
         gap: 2vh;
         place-items: center;
+        margin-bottom: 2vh;
     }
     .single {
         border: 1px solid #ccc;
