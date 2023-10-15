@@ -95,26 +95,22 @@ body{
    
 }
 .single {
-    position: relative;
     border: 1px solid #ccc;
     border-radius: 0 15% 0 17%;
     overflow: hidden;
-    display: inline-block;
-    padding: 1vh;
     background: white;
-    width: 70%;
-    padding: 3vh 0 0 3vh;
+    width: 60%;
+    padding: 3vh 3vh 0 3vh;
 }
 .diff{
-    
-    width: 92%;
+    width: 100%;
     height: 30vh ;
     border-radius: 0 20% 0 20%;
+    overflow: hidden;
 }
 .diff img {
     width: 100%;
     height: 100%;
-    display: block;
     border-radius: 0 20% 0 20%;
 }
 
@@ -176,18 +172,38 @@ body{
     #box{
         display: grid;
         grid-template-columns: repeat(2,1fr);
-        gap:2rem;
-        padding:1rem 1rem 1rem 3rem;
-       
+        padding: 0;
+        gap: 2vh;
+        place-items: center;
+    }
+    .single {
+        border: 1px solid #ccc;
+        border-radius: 0 15% 0 17%;
+        overflow: hidden;
+        background: white;
+        width: 80%;
+       padding: 2vh;
+      
     }
 
-.order-button{
-    float: left;
-    margin-left: 12vh;
-}
+    .diff{
+        padding: 0;
+        width: 100%;
+        height: 30vh ;
+        border-radius: 0 20% 0 20%;
+        overflow: hidden;
+    }
+    .diff img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0 20% 0 20%;
+    }
+
+
+
 .bottom{
     background: linear-gradient(to right, #ef5350, #f48fb1, #f48fb1, #f48fb1, #e99fb7, #e9a5bb, #e6ad52, #e7ad4e,#dde95e);
-    height: 140vh;
+    height: 160vh;
   
 }
 }
@@ -210,30 +226,60 @@ body{
         color: white;
         opacity: 1;
      }
-
-
-}
-
-@media screen and (max-width:550px) {
-    #box{
+     #box{
         display: grid;
         grid-template-columns: repeat(1,1fr);
-        gap:2rem;
-        padding:1rem 1rem 1rem 3rem;
+        place-items: center;
+        padding: 0;
+        margin-bottom: 2vh;
        
     }
-    .order-button{
-        float: left;
-        margin-left: 30%;
+    .single {
+        border-radius: 0 15% 0 17%;
+        overflow: hidden;
+        display: inline-block;
+       
+        background: white;
+        width: 40%;
+        
+       
+    }
+
+    .diff{
+        width: 100%;
+        height: 30vh ;
+        border-radius: 0 20% 0 20%;
+        overflow: hidden;
+    }
+    .diff img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0 20% 0 20%;
     }
     .bottom{
         background: linear-gradient(to right, #ef5350, #f48fb1, #f48fb1, #f48fb1, #e99fb7, #e9a5bb, #e6ad52, #e7ad4e,#dde95e);
-        height: 200vh;
+        height: 210vh;
       
     }
+  
 
 }
+
 @media screen and (max-width:500px) {
+  
+   .single {
+    border-radius: 0 15% 0 17%;
+    overflow: hidden;
+    display: inline-block;
+   
+    background: white;
+    width: 55%;
+    
+   
+}
+
+
+
     .img2 {
         position: absolute;
         height: 50%;
